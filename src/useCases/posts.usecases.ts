@@ -43,6 +43,12 @@ export class PostUseCase {
   }
 
   async delete(id: number): Promise<Post | null> {
+    const postExists = await this.postRepository.findById(id);
+
+    if (!postExists) {
+      throw new Error("Post does not exist");
+    }
+
     return await this.postRepository.delete(id);
   }
 
