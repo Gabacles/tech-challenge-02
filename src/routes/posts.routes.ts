@@ -133,7 +133,7 @@ export async function postRoutes(fastify: FastifyInstance) {
     async (req, reply) => {
       const { title, content } = req.body;
 
-      const { email } = req.headers;
+      const { email } = req.headers as { email: string };
 
       try {
         const data = await postUseCase.create({
