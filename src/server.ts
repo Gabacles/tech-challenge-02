@@ -10,7 +10,7 @@ const swaggerOptions = {
   swagger: {
     info: {
       title: "Tech Challenge II API",
-      description: "API Documentation",
+      description: "Tech Challenge II API Documentation",
       version: "1.0.0",
     },
     host: "localhost",
