@@ -2,16 +2,22 @@
   "name": "tech-challenge-2",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "20.15.1"
+  },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx src/server.ts"
+    "dev": "tsx src/server.ts",
+    "build": "tsup src",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/node": "^22.7.3",
     "prisma": "^5.18.0",
     "tsx": "^4.17.0",
     "typescript": "^5.5.4"

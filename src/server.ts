@@ -36,9 +36,9 @@ app.register(postRoutes, { prefix: "/posts" });
 
 app.listen(
   {
-    port: 3000,
+    port: process.env.PORT ? Number(process.env.PORT) : 8000,
   },
   () => {
-    console.log("Server is running on http://localhost:3000");
+    console.log("Server is running on http://localhost:8000");
   }
 );
